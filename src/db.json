@@ -1,0 +1,971 @@
+{
+    "menuItem": [
+        { "path": "/", "label": "صفحه اصلی", "icon": "Home" },
+        { "path": "/users", "label": "کاربران", "icon": "Users" },
+        { "path": "/bikes", "label": "دوچرخه و دستگاه‌ها", "icon": "Bike" },
+        {
+            "path": "/finance",
+            "label": "امور مالی",
+            "icon": "DollarSign",
+            "submenu": [
+                { "path": "/finance/policies", "label": "سیاست‌ها" },
+                { "path": "/finance/payment-reports", "label": "گزارش پرداخت/کیف پول" },
+                { "path": "/finance/financial-reports", "label": "گزارش مالی (استفاده/پرداخت/شارژ)" }
+            ]
+        },
+        { "path": "/settings", "label": "تنظیمات", "icon": "Settings" },
+        { "path": "/permissions", "label": "دسترسی‌ها", "icon": "Shield" }
+    ],
+    "notifications": [
+        { "id": 1, "message": "دوچرخه BK-1234 نیاز به تعمیر دارد", "time": "5 دقیقه پیش", "type": "warning" },
+        { "id": 2, "message": "کاربر جدید ثبت‌نام کرد", "time": "12 دقیقه پیش", "type": "info" },
+        { "id": 3, "message": "باتری دوچرخه BK-5678 کم است", "time": "18 دقیقه پیش", "type": "critical" },
+        { "id": 4, "message": "پرداخت موفق - 250,000 تومان", "time": "25 دقیقه پیش", "type": "success" },
+        { "id": 5, "message": "سفر جدید آغاز شد", "time": "30 دقیقه پیش", "type": "info" }
+    ],
+    "monthlyData": [
+        { "month": "فروردین", "revenue": 82 },
+        { "month": "اردیبهشت", "revenue": 95 },
+        { "month": "خرداد", "revenue": 88 },
+        { "month": "تیر", "revenue": 110 },
+        { "month": "مرداد", "revenue": 103 },
+        { "month": "شهریور", "revenue": 125 },
+        { "month": "مهر", "revenue": 118 },
+        { "month": "آبان", "revenue": 142 },
+        { "month": "آذر", "revenue": 135 },
+        { "month": "دی", "revenue": 128 },
+        { "month": "بهمن", "revenue": 145 },
+        { "month": "اسفند", "revenue": 162 }
+    ],
+    "transactions": [
+        {
+            "id": "#TXN-98234",
+            "user": "علی محمدی",
+            "type": "charge",
+            "amount": "+100,000",
+            "status": "success",
+            "time": "5 دقیقه پیش"
+        },
+        {
+            "id": "#TXN-98233",
+            "user": "سارا رضایی",
+            "type": "trip",
+            "amount": "-8,500",
+            "status": "success",
+            "time": "12 دقیقه پیش"
+        },
+        {
+            "id": "#TXN-98232",
+            "user": "فاطمه حسینی",
+            "type": "charge",
+            "amount": "+200,000",
+            "status": "success",
+            "time": "25 دقیقه پیش"
+        },
+        {
+            "id": "#TXN-98231",
+            "user": "محمد کریمی",
+            "type": "trip",
+            "amount": "-12,000",
+            "status": "failed",
+            "time": "40 دقیقه پیش"
+        },
+                {
+            "id": "#TXN-98230",
+            "user": "زهرا احمدی",
+            "type": "charge",
+            "amount": "+50,000",
+            "status": "success",
+            "time": "1 ساعت پیش"
+        },
+        {
+            "id": "#TXN-98229",
+            "user": "رضا کمالی",
+            "type": "trip",
+            "amount": "-15,200",
+            "status": "success",
+            "time": "1 ساعت و 15 دقیقه پیش"
+        },
+        {
+            "id": "#TXN-98228",
+            "user": "مریم موسوی",
+            "type": "charge",
+            "amount": "+500,000",
+            "status": "failed",
+            "time": "2 ساعت پیش"
+        },
+        {
+            "id": "#TXN-98227",
+            "user": "حسین عسکری",
+            "type": "trip",
+            "amount": "-9,800",
+            "status": "success",
+            "time": "3 ساعت پیش"
+        },
+        {
+            "id": "#TXN-98226",
+            "user": "لیلا صادقی",
+            "type": "charge",
+            "amount": "+75,000",
+            "status": "success",
+            "time": "5 ساعت پیش"
+        },
+        {
+            "id": "#TXN-98225",
+            "user": "امیر طاهری",
+            "type": "trip",
+            "amount": "-22,500",
+            "status": "failed",
+            "time": "دیروز، ۱۰:۱۵"
+        },
+        {
+            "id": "#TXN-98224",
+            "user": "نرجس محمدپور",
+            "type": "charge",
+            "amount": "+300,000",
+            "status": "success",
+            "time": "دیروز، ۱۴:۳۰"
+        },
+        {
+            "id": "#TXN-98223",
+            "user": "پیمان نوری",
+            "type": "trip",
+            "amount": "-7,200",
+            "status": "success",
+            "time": "دیروز، ۱۸:۴۵"
+        },
+        {
+            "id": "#TXN-98222",
+            "user": "سمانه جعفری",
+            "type": "charge",
+            "amount": "+120,000",
+            "status": "pending",
+            "time": "دیروز، ۲۲:۱۰"
+        },
+        {
+            "id": "#TXN-98221",
+            "user": "عرفان مظلومی",
+            "type": "trip",
+            "amount": "-18,750",
+            "status": "success",
+            "time": "۲ روز پیش"
+        }
+    ],
+    "sections": [
+        {
+            "title": "سیاست‌ها",
+            "description": "مدیریت قیمت‌گذاری و سیاست‌های مالی",
+            "icon": "FileText",
+            "path": "/finance/policies"
+        },
+        {
+            "title": "گزارش پرداخت/کیف پول",
+            "description": "مشاهده تراکنش‌ها و موجودی کیف پول کاربران",
+            "icon": "Wallet",
+            "path": "/finance/payment-reports"
+        },
+        {
+            "title": "گزارش مالی",
+            "description": "گزارشات استفاده، پرداخت و شارژ",
+            "icon": "TrendingUp",
+            "path": "/finance/financial-reports"
+        }
+    ],
+    "roles": [
+        {
+            "id": "super-admin",
+            "name": "سوپر ادمین",
+            "userCount": 2,
+            "badge": "کامل",
+            "badgeColor": "bg-primary/10 text-primary",
+            "icon": "Shield",
+            "permissions": {
+                "users": true,
+                "bikes": true,
+                "finance": true,
+                "settings": true,
+                "permissions": true
+            }
+        },
+        {
+            "id": "operator",
+            "name": "مدیر عملیاتی",
+            "userCount": 5,
+            "badge": "محدود",
+            "badgeColor": "bg-blue-500/10 text-blue-500",
+            "icon": "Users",
+            "permissions": {
+                "users": true,
+                "bikes": true,
+                "finance": false,
+                "settings": false,
+                "permissions": false
+            }
+        },
+        {
+            "id": "support",
+            "name": "پشتیبانی",
+            "userCount": 12,
+            "badge": "پایه",
+            "badgeColor": "bg-muted text-muted-foreground",
+            "icon": "HelpCircle",
+            "permissions": {
+                "users": true,
+                "bikes": false,
+                "finance": false,
+                "settings": false,
+                "permissions": false
+            }
+        },
+        {
+            "id": "financial",
+            "name": "ناظر مالی",
+            "userCount": 3,
+            "badge": "مالی",
+            "badgeColor": "bg-[var(--status-active)]/10 text-[var(--status-active)]",
+            "icon": "FileText",
+            "permissions": {
+                "users": false,
+                "bikes": false,
+                "finance": true,
+                "settings": false,
+                "permissions": false
+            }
+        }
+    ],
+    "stationsLocation": [
+        {
+            "id": 2,
+            "name": "محله ی وحیدیه",
+            "bikeCount": 12,
+            "lat": 36.42088089708715,
+            "lng": 54.963376968094316
+        },
+        {
+            "id": 3,
+            "name": "پارکینگ بوستان مشاهیر",
+            "bikeCount": 12,
+            "lat": 36.4239369760455,
+            "lng": 54.953080432205276
+        },
+        {
+            "id": 4,
+            "name": "پارکینگ ورزشگاه شهید اکبری",
+            "bikeCount": 12,
+            "lat": 36.41870077027781,
+            "lng": 54.95427949678194
+        },
+        {
+            "id": 5,
+            "name": "بوستان پاتوق شب نشینی",
+            "bikeCount": 12,
+            "lat": 36.41242165073699,
+            "lng": 54.94565139120644
+        },
+        {
+            "id": 6,
+            "name": "پارک شهید صدوقی",
+            "bikeCount": 12,
+            "lat": 36.41242165073699,
+            "lng": 54.94565139120644
+        },
+        {
+            "id": 7,
+            "name": "پارک شهرک البرز",
+            "bikeCount": 12,
+            "lat": 36.405223,
+            "lng": 54.937115
+        },
+        {
+            "id": 8,
+            "name": "پارک کوثر",
+            "bikeCount": 12,
+            "lat": 36.402743680525255,
+            "lng": 54.9341945930213
+        },
+        {
+            "id": 9,
+            "name": "سالن و چمن مصنوعی بهارستان",
+            "bikeCount": 12,
+            "lat": 36.42765494482763,
+            "lng": 55.00322342714118
+        },
+            {
+        "id": 10,
+        "name": "پارک نوفل لوشاتو",
+        "bikeCount": 12,
+        "lat": 36.41969069999999,
+        "lng": 54.9893631
+    },
+    {
+        "id": 11,
+        "name": "پارک شهرک رجا",
+        "bikeCount": 12,
+        "lat": 36.433158137164696,
+        "lng": 54.99308800092965
+    },
+    {
+        "id": 12,
+        "name": "بوستان گوهری",
+        "bikeCount": 12,
+        "lat": 36.401728294105666,
+        "lng": 54.976586537480586
+    },
+    {
+        "id": 13,
+        "name": "پارک ملت",
+        "bikeCount": 12,
+        "lat": 36.40552519999999,
+        "lng": 54.9845599
+    },
+    {
+        "id": 14,
+        "name": "پارک شهرک ولیعصر",
+        "bikeCount": 12,
+        "lat": 36.409539710500304,
+        "lng": 55.00131793048873
+    },
+    {
+        "id": 15,
+        "name": "بوستان شفا",
+        "bikeCount": 12,
+        "lat": 36.4228472128176,
+        "lng": 55.001937186697205
+    },
+    {
+        "id": 16,
+        "name": "دانشگاه صنعتی شاهرود",
+        "bikeCount": 12,
+        "lat": 36.391899860770025,
+        "lng": 54.94060066486037
+    }
+    ],
+    "alerts": [
+        {
+            "id": 1,
+            "type": "battery",
+            "bikeId": "BK-1234",
+            "message": "سطح باتری کمتر از 10٪ - نیاز به شارژ فوری",
+            "timestamp": "5 دقیقه پیش",
+            "severity": "critical"
+        },
+        {
+            "id": 2,
+            "type": "movement",
+            "bikeId": "BK-5678",
+            "message": "حرکت بدون سفر فعال - احتمال سرقت",
+            "timestamp": "12 دقیقه پیش",
+            "severity": "critical"
+        },
+        {
+            "id": 3,
+            "type": "lock",
+            "bikeId": "BK-9012",
+            "message": "خطا در سیستم قفل - عدم پاسخگویی",
+            "timestamp": "18 دقیقه پیش",
+            "severity": "warning"
+        },
+        {
+            "id": 4,
+            "type": "battery",
+            "bikeId": "BK-3456",
+            "message": "باتری ضعیف - کمتر از 20٪",
+            "timestamp": "25 دقیقه پیش",
+            "severity": "warning"
+        },
+        {
+            "id": 5,
+            "type": "battery",
+            "bikeId": "BK-7890",
+            "message": "سطح باتری کمتر از 15٪ - نیاز به شارژ",
+            "timestamp": "32 دقیقه پیش",
+            "severity": "critical"
+        },
+        {
+            "id": 6,
+            "type": "movement",
+            "bikeId": "BK-2345",
+            "message": "حرکت غیرعادی تشخیص داده شد",
+            "timestamp": "45 دقیقه پیش",
+            "severity": "warning"
+        },
+        {
+            "id": 7,
+            "type": "lock",
+            "bikeId": "BK-6789",
+            "message": "قفل دوچرخه باز شده بدون مجوز",
+            "timestamp": "1 ساعت پیش",
+            "severity": "critical"
+        },
+        {
+            "id": 8,
+            "type": "battery",
+            "bikeId": "BK-0123",
+            "message": "باتری در حال اتمام - 8٪ باقی مانده",
+            "timestamp": "1.5 ساعت پیش",
+            "severity": "critical"
+        }
+    ],
+    "userData": [
+        {
+            "id": 1001,
+            "name": "علی محمدی",
+            "initials": "ع.م",
+            "phone": "0912-345-6789",
+            "trips": 48,
+            "balance": "120,000",
+            "status": "active",
+            "joined": "1402/08/15",
+            "gradient": "linear-gradient(135deg, #b666d2, #9333ea)"
+        },
+        {
+            "id": 1002,
+            "name": "سارا رضایی",
+            "initials": "س.ر",
+            "phone": "0935-678-9012",
+            "trips": 123,
+            "balance": "350,000",
+            "status": "active",
+            "joined": "1402/06/20",
+            "gradient": "linear-gradient(135deg, #10b981, #0891b2)"
+        },
+        {
+            "id": 1003,
+            "name": "محمد کریمی",
+            "initials": "م.ک",
+            "phone": "0911-234-5678",
+            "trips": 7,
+            "balance": "0",
+            "status": "inactive",
+            "joined": "1402/10/3",
+            "gradient": "linear-gradient(135deg, #f59e0b, #ef4444)"
+        },
+        {
+            "id": 1004,
+            "name": "فاطمه حسینی",
+            "initials": "ف.ح",
+            "phone": "0901-456-7890",
+            "trips": 89,
+            "balance": "280,000",
+            "status": "active",
+            "joined": "1402/05/11",
+            "gradient": "linear-gradient(135deg, #6366f1, #b666d2)"
+        },
+        {
+            "id": 1005,
+            "name": "امیر نجفی",
+            "initials": "ا.ن",
+            "phone": "0914-789-0123",
+            "trips": 2,
+            "balance": "50,000",
+            "status": "blocked",
+            "joined": "1402/11/28",
+            "gradient": "linear-gradient(135deg, #ef4444, #f97316)"
+        }
+    ],
+    "bikesData": [
+        {
+        "id": "BK-1001",
+        "status": "charging",
+        "battery": 8,
+        "station": "",
+        "stationId": 1,
+        "lastTrip": "۲ ساعت پیش",
+        "totalTrips": 1428
+        },
+        {
+        "id": "BK-1002",
+        "status": "available",
+        "battery": 45,
+        "station": "",
+        "stationId": 1,
+        "lastTrip": "۵ ساعت پیش",
+        "totalTrips": 892
+        },
+        {
+        "id": "BK-1003",
+        "status": "in-use",
+        "battery": 78,
+        "station": "",
+        "stationId": 1,
+        "lastTrip": "۱۰ دقیقه پیش",
+        "totalTrips": 567
+        },
+        {
+        "id": "BK-2001",
+        "status": "available",
+        "battery": 92,
+        "station": "محله ی وحیدیه",
+        "stationId": 2,
+        "lastTrip": "۱ ساعت پیش",
+        "totalTrips": 324
+        },
+        {
+        "id": "BK-2002",
+        "status": "charging",
+        "battery": 15,
+        "station": "محله ی وحیدیه",
+        "stationId": 2,
+        "lastTrip": "۳ ساعت پیش",
+        "totalTrips": 765
+        },
+        {
+        "id": "BK-2003",
+        "status": "maintenance",
+        "battery": 5,
+        "station": "محله ی وحیدیه",
+        "stationId": 2,
+        "lastTrip": "۲ روز پیش",
+        "totalTrips": 1234
+        },
+        {
+        "id": "BK-3001",
+        "status": "available",
+        "battery": 88,
+        "station": "پارکینگ بوستان مشاهیر",
+        "stationId": 3,
+        "lastTrip": "۳۰ دقیقه پیش",
+        "totalTrips": 753
+        },
+        {
+        "id": "BK-3002",
+        "status": "in-use",
+        "battery": 56,
+        "station": "پارکینگ بوستان مشاهیر",
+        "stationId": 3,
+        "lastTrip": "۵ دقیقه پیش",
+        "totalTrips": 432
+        },
+        {
+        "id": "BK-4001",
+        "status": "available",
+        "battery": 95,
+        "station": "پارکینگ ورزشگاه شهید اکبری",
+        "stationId": 4,
+        "lastTrip": "۴ ساعت پیش",
+        "totalTrips": 1860
+        },
+        {
+        "id": "BK-4002",
+        "status": "charging",
+        "battery": 22,
+        "station": "پارکینگ ورزشگاه شهید اکبری",
+        "stationId": 4,
+        "lastTrip": "۱ ساعت پیش",
+        "totalTrips": 543
+        },
+        {
+        "id": "BK-5001",
+        "status": "available",
+        "battery": 85,
+        "station": "بوستان پاتوق شب نشینی",
+        "stationId": 5,
+        "lastTrip": "۳ ساعت پیش",
+        "totalTrips": 2341
+        },
+        {
+        "id": "BK-5002",
+        "status": "in-use",
+        "battery": 34,
+        "station": "بوستان پاتوق شب نشینی",
+        "stationId": 5,
+        "lastTrip": "۱۵ دقیقه پیش",
+        "totalTrips": 876
+        },
+        {
+        "id": "BK-6001",
+        "status": "available",
+        "battery": 72,
+        "station": "پارک شهید صدوقی",
+        "stationId": 6,
+        "lastTrip": "۲ ساعت پیش",
+        "totalTrips": 567
+        },
+        {
+        "id": "BK-6002",
+        "status": "charging",
+        "battery": 12,
+        "station": "پارک شهید صدوقی",
+        "stationId": 6,
+        "lastTrip": "۶ ساعت پیش",
+        "totalTrips": 321
+        },
+        {
+        "id": "BK-7001",
+        "status": "maintenance",
+        "battery": 12,
+        "station": "پارک شهرک البرز",
+        "stationId": 7,
+        "lastTrip": "۲ روز پیش",
+        "totalTrips": 3120
+        },
+        {
+        "id": "BK-7002",
+        "status": "available",
+        "battery": 67,
+        "station": "پارک شهرک البرز",
+        "stationId": 7,
+        "lastTrip": "۵ ساعت پیش",
+        "totalTrips": 987
+        },
+        {
+        "id": "BK-8001",
+        "status": "available",
+        "battery": 91,
+        "station": "پارک کوثر",
+        "stationId": 8,
+        "lastTrip": "۴ ساعت پیش",
+        "totalTrips": 892
+        },
+        {
+        "id": "BK-8002",
+        "status": "in-use",
+        "battery": 48,
+        "station": "پارک کوثر",
+        "stationId": 8,
+        "lastTrip": "۲۰ دقیقه پیش",
+        "totalTrips": 654
+        },
+        {
+        "id": "BK-9001",
+        "status": "charging",
+        "battery": 15,
+        "station": "سالن و چمن مصنوعی بهارستان",
+        "stationId": 9,
+        "lastTrip": "۶ ساعت پیش",
+        "totalTrips": 456
+        },
+        {
+        "id": "BK-9002",
+        "status": "available",
+        "battery": 82,
+        "station": "سالن و چمن مصنوعی بهارستان",
+        "stationId": 9,
+        "lastTrip": "۲ ساعت پیش",
+        "totalTrips": 234
+        },
+        {
+        "id": "BK-10001",
+        "status": "available",
+        "battery": 78,
+        "station": "پارک نوفل لوشاتو",
+        "stationId": 10,
+        "lastTrip": "۱ ساعت پیش",
+        "totalTrips": 445
+        },
+        {
+        "id": "BK-10002",
+        "status": "charging",
+        "battery": 28,
+        "station": "پارک نوفل لوشاتو",
+        "stationId": 10,
+        "lastTrip": "۳ ساعت پیش",
+        "totalTrips": 678
+        },
+        {
+        "id": "BK-11001",
+        "status": "available",
+        "battery": 88,
+        "station": "پارک شهرک رجا",
+        "stationId": 11,
+        "lastTrip": "۳۰ دقیقه پیش",
+        "totalTrips": 789
+        },
+        {
+        "id": "BK-11002",
+        "status": "in-use",
+        "battery": 52,
+        "station": "پارک شهرک رجا",
+        "stationId": 11,
+        "lastTrip": "۱۰ دقیقه پیش",
+        "totalTrips": 345
+        },
+        {
+        "id": "BK-12001",
+        "status": "available",
+        "battery": 94,
+        "station": "بوستان گوهری",
+        "stationId": 12,
+        "lastTrip": "۵ ساعت پیش",
+        "totalTrips": 567
+        },
+        {
+        "id": "BK-12002",
+        "status": "charging",
+        "battery": 18,
+        "station": "بوستان گوهری",
+        "stationId": 12,
+        "lastTrip": "۴ ساعت پیش",
+        "totalTrips": 890
+        },
+        {
+        "id": "BK-13001",
+        "status": "available",
+        "battery": 96,
+        "station": "پارک ملت",
+        "stationId": 13,
+        "lastTrip": "۲ ساعت پیش",
+        "totalTrips": 1245
+        },
+        {
+        "id": "BK-13002",
+        "status": "in-use",
+        "battery": 43,
+        "station": "پارک ملت",
+        "stationId": 13,
+        "lastTrip": "۲۵ دقیقه پیش",
+        "totalTrips": 876
+        },
+        {
+        "id": "BK-14001",
+        "status": "available",
+        "battery": 71,
+        "station": "پارک شهرک ولیعصر",
+        "stationId": 14,
+        "lastTrip": "۶ ساعت پیش",
+        "totalTrips": 432
+        },
+        {
+        "id": "BK-14002",
+        "status": "charging",
+        "battery": 35,
+        "station": "پارک شهرک ولیعصر",
+        "stationId": 14,
+        "lastTrip": "۱ ساعت پیش",
+        "totalTrips": 654
+        },
+        {
+        "id": "BK-15001",
+        "status": "available",
+        "battery": 82,
+        "station": "بوستان شفا",
+        "stationId": 15,
+        "lastTrip": "۳ ساعت پیش",
+        "totalTrips": 678
+        },
+        {
+        "id": "BK-15002",
+        "status": "maintenance",
+        "battery": 8,
+        "station": "بوستان شفا",
+        "stationId": 15,
+        "lastTrip": "۱ روز پیش",
+        "totalTrips": 1234
+        },
+        {
+        "id": "BK-16001",
+        "status": "available",
+        "battery": 90,
+        "station": "دانشگاه صنعتی شاهرود",
+        "stationId": 16,
+        "lastTrip": "۴ ساعت پیش",
+        "totalTrips": 156
+        },
+        {
+        "id": "BK-16002",
+        "status": "in-use",
+        "battery": 67,
+        "station": "دانشگاه صنعتی شاهرود",
+        "stationId": 16,
+        "lastTrip": "۸ دقیقه پیش",
+        "totalTrips": 543
+        }
+    ],
+    "stationsData": [
+        {
+            "id": 2,
+            "name": "محله ی وحیدیه",
+            "location": "وحیدیه",
+            "address": "بلوار وحیدیه، نبش کوچه ۱۲",
+            "coordinates": { "lat": 36.42088089708715, "lng": 54.963376968094316 },
+            "stats": { "totalDocks": 18, "availableBikes": 12, "availableDocks": 4, "bikesInUse": 2 },
+            "bikeStatus": { "healthy": 9, "lowBattery": 2, "needsRepair": 1, "missing": 0 },
+            "lastUpdated": "2026-01-15T10:30:00.000Z",
+            "status": "active",
+            "popularity": 65,
+            "nearbyLandmarks": ["مسجد جامع وحیدیه", "بوستان وحید", "مدرسه شاهد"]
+        },
+        {
+            "id": 3,
+            "name": "پارکینگ بوستان مشاهیر",
+            "location": "منطقه ۲",
+            "address": "بلوار مشاهیر، جنب بوستان",
+            "coordinates": { "lat": 36.4239369760455, "lng": 54.953080432205276 },
+            "stats": { "totalDocks": 22, "availableBikes": 12, "availableDocks": 8, "bikesInUse": 2 },
+            "bikeStatus": { "healthy": 11, "lowBattery": 1, "needsRepair": 0, "missing": 0 },
+            "lastUpdated": "2026-01-15T10:30:00.000Z",
+            "status": "active",
+            "popularity": 72,
+            "nearbyLandmarks": ["بوستان مشاهیر", "فرهنگسرای مشاهیر", "مجتمع تجاری نور"]
+        },
+        {
+            "id": 4,
+            "name": "پارکینگ ورزشگاه شهید اکبری",
+            "location": "منطقه ۲",
+            "address": "خیابان ورزش، ورزشگاه شهید اکبری",
+            "coordinates": { "lat": 36.41870077027781, "lng": 54.95427949678194 },
+            "stats": { "totalDocks": 30, "availableBikes": 12, "availableDocks": 15, "bikesInUse": 3 },
+            "bikeStatus": { "healthy": 10, "lowBattery": 1, "needsRepair": 1, "missing": 0 },
+            "lastUpdated": "2026-01-15T10:30:00.000Z",
+            "status": "active",
+            "popularity": 85,
+            "nearbyLandmarks": ["ورزشگاه شهید اکبری", "سالن کشتی", "باشگاه بدنسازی المپیک"]
+        },
+        {
+            "id": 5,
+            "name": "بوستان پاتوق شب نشینی",
+            "location": "منطقه ۳",
+            "address": "بلوار شب نشینی، روبروی پارک",
+            "coordinates": { "lat": 36.41242165073699, "lng": 54.94565139120644 },
+            "stats": { "totalDocks": 16, "availableBikes": 12, "availableDocks": 2, "bikesInUse": 2 },
+            "bikeStatus": { "healthy": 8, "lowBattery": 3, "needsRepair": 1, "missing": 0 },
+            "lastUpdated": "2026-01-15T10:30:00.000Z",
+            "status": "active",
+            "popularity": 70,
+            "nearbyLandmarks": ["کافه شب نشینی", "پلاژ تفریحی", "رستوران سنتی"]
+        },
+        {
+            "id": 6,
+            "name": "پارک شهید صدوقی",
+            "location": "منطقه ۳",
+            "address": "خیابان صدوقی، نبش کوچه دوم",
+            "coordinates": { "lat": 36.41242165073699, "lng": 54.94565139120644 },
+            "stats": { "totalDocks": 20, "availableBikes": 12, "availableDocks": 6, "bikesInUse": 2 },
+            "bikeStatus": { "healthy": 10, "lowBattery": 2, "needsRepair": 0, "missing": 0 },
+            "lastUpdated": "2026-01-15T10:30:00.000Z",
+            "status": "active",
+            "popularity": 68,
+            "nearbyLandmarks": ["مسجد شهید صدوقی", "مدرسه راهنمایی صدوقی", "بقالی محلی"]
+        },
+        {
+            "id": 7,
+            "name": "پارک شهرک البرز",
+            "location": "شهرک البرز",
+            "address": "فاز ۲ شهرک البرز، بلوار اصلی",
+            "coordinates": { "lat": 36.405223, "lng": 54.937115 },
+            "stats": { "totalDocks": 24, "availableBikes": 12, "availableDocks": 10, "bikesInUse": 2 },
+            "bikeStatus": { "healthy": 11, "lowBattery": 1, "needsRepair": 0, "missing": 0 },
+            "lastUpdated": "2026-01-15T10:30:00.000Z",
+            "status": "maintenance",
+            "popularity": 55,
+            "nearbyLandmarks": ["مدرسه البرز", "فروشگاه رفاه", "داروخانه شبانه روزی"]
+        },
+        {
+            "id": 8,
+            "name": "پارک کوثر",
+            "location": "منطقه ۴",
+            "address": "بلوار کوثر، تقاطع خیابان سعادت",
+            "coordinates": { "lat": 36.402743680525255, "lng": 54.9341945930213 },
+            "stats": { "totalDocks": 20, "availableBikes": 12, "availableDocks": 5, "bikesInUse": 3 },
+            "bikeStatus": { "healthy": 9, "lowBattery": 2, "needsRepair": 1, "missing": 0 },
+            "lastUpdated": "2026-01-15T10:30:00.000Z",
+            "status": "active",
+            "popularity": 80,
+            "nearbyLandmarks": ["مدرسه کوثر", "مجتمع تجاری سبلان", "کتابخانه عمومی"]
+        },
+        {
+            "id": 9,
+            "name": "سالن و چمن مصنوعی بهارستان",
+            "location": "بهارستان",
+            "address": "خیابان بهارستان، انتهای کوچه اول",
+            "coordinates": { "lat": 36.42765494482763, "lng": 55.00322342714118 },
+            "stats": { "totalDocks": 15, "availableBikes": 9, "availableDocks": 4, "bikesInUse": 2 },
+            "bikeStatus": { "healthy": 7, "lowBattery": 1, "needsRepair": 1, "missing": 0 },
+            "lastUpdated": "2026-01-15T10:30:00.000Z",
+            "status": "active",
+            "popularity": 60,
+            "nearbyLandmarks": ["چمن مصنوعی بهارستان", "باشگاه فوتبال بهارستان", "کافه اسپورت"]
+        },
+        {
+            "id": 10,
+            "name": "پارک نوفل لوشاتو",
+            "location": "نوفل لوشاتو",
+            "address": "بلوار نوفل لوشاتو، ابتدای پارک",
+            "coordinates": { "lat": 36.41969069999999, "lng": 54.9893631 },
+            "stats": { "totalDocks": 25, "availableBikes": 12, "availableDocks": 10, "bikesInUse": 3 },
+            "bikeStatus": { "healthy": 10, "lowBattery": 2, "needsRepair": 0, "missing": 0 },
+            "lastUpdated": "2026-01-15T10:30:00.000Z",
+            "status": "active",
+            "popularity": 88,
+            "nearbyLandmarks": ["کتابخانه مرکزی", "موزه هنرهای معاصر", "کافه گالری"]
+        },
+        {
+            "id": 11,
+            "name": "پارک شهرک رجا",
+            "location": "شهرک رجا",
+            "address": "فاز ۳ شهرک رجا، بلوار اصلی",
+            "coordinates": { "lat": 36.433158137164696, "lng": 54.99308800092965 },
+            "stats": { "totalDocks": 18, "availableBikes": 11, "availableDocks": 5, "bikesInUse": 2 },
+            "bikeStatus": { "healthy": 9, "lowBattery": 2, "needsRepair": 0, "missing": 1 },
+            "lastUpdated": "2026-01-15T10:30:00.000Z",
+            "status": "active",
+            "popularity": 62,
+            "nearbyLandmarks": ["مسجد رجا", "مدرسه ابتدایی رجا", "پارک بازی"]
+        },
+        {
+            "id": 12,
+            "name": "بوستان گوهری",
+            "location": "منطقه ۵",
+            "address": "خیابان گوهری، نبش کوچه چهارم",
+            "coordinates": { "lat": 36.401728294105666, "lng": 54.976586537480586 },
+            "stats": { "totalDocks": 20, "availableBikes": 12, "availableDocks": 6, "bikesInUse": 2 },
+            "bikeStatus": { "healthy": 10, "lowBattery": 2, "needsRepair": 0, "missing": 0 },
+            "lastUpdated": "2026-01-15T10:30:00.000Z",
+            "status": "offline",
+            "popularity": 45,
+            "nearbyLandmarks": ["بوستان گوهری", "کفش فروشی گوهری", "نانوایی سنگک"]
+        },
+        {
+            "id": 13,
+            "name": "پارک ملت",
+            "location": "مرکز شهر",
+            "address": "میدان ملت، خیابان ملت",
+            "coordinates": { "lat": 36.40552519999999, "lng": 54.9845599 },
+            "stats": { "totalDocks": 35, "availableBikes": 20, "availableDocks": 10, "bikesInUse": 5 },
+            "bikeStatus": { "healthy": 16, "lowBattery": 3, "needsRepair": 1, "missing": 0 },
+            "lastUpdated": "2026-01-15T10:30:00.000Z",
+            "status": "active",
+            "popularity": 95,
+            "nearbyLandmarks": ["برج میلاد", "باغ ملت", "مجتمع تجاری الماس", "ایستگاه مترو"]
+        },
+        {
+            "id": 14,
+            "name": "پارک شهرک ولیعصر",
+            "location": "شهرک ولیعصر",
+            "address": "بلوار ولیعصر، خیابان جانبازان",
+            "coordinates": { "lat": 36.409539710500304, "lng": 55.00131793048873 },
+            "stats": { "totalDocks": 22, "availableBikes": 12, "availableDocks": 8, "bikesInUse": 2 },
+            "bikeStatus": { "healthy": 10, "lowBattery": 1, "needsRepair": 1, "missing": 0 },
+            "lastUpdated": "2026-01-15T10:30:00.000Z",
+            "status": "active",
+            "popularity": 74,
+            "nearbyLandmarks": ["مسجد صاحب الزمان", "فروشگاه زنجیره ای", "پمپ بنزین"]
+        },
+        {
+            "id": 15,
+            "name": "بوستان شفا",
+            "location": "منطقه ۶",
+            "address": "بلوار شفا، جنب بیمارستان",
+            "coordinates": { "lat": 36.4228472128176, "lng": 55.001937186697205 },
+            "stats": { "totalDocks": 16, "availableBikes": 9, "availableDocks": 5, "bikesInUse": 2 },
+            "bikeStatus": { "healthy": 7, "lowBattery": 1, "needsRepair": 1, "missing": 0 },
+            "lastUpdated": "2026-01-15T10:30:00.000Z",
+            "status": "active",
+            "popularity": 58,
+            "nearbyLandmarks": ["بیمارستان شفا", "داروخانه شفا", "آزمایشگاه طبی"]
+        },
+        {
+            "id": 16,
+            "name": "دانشگاه صنعتی شاهرود",
+            "location": "شاهرود",
+            "address": "بلوار دانشگاه، دانشگاه صنعتی شاهرود",
+            "coordinates": { "lat": 36.391899860770025, "lng": 54.94060066486037 },
+            "stats": { "totalDocks": 40, "availableBikes": 28, "availableDocks": 8, "bikesInUse": 4 },
+            "bikeStatus": { "healthy": 22, "lowBattery": 4, "needsRepair": 2, "missing": 0 },
+            "lastUpdated": "2026-01-15T10:30:00.000Z",
+            "status": "active",
+            "popularity": 90,
+            "nearbyLandmarks": ["دانشگاه صنعتی", "سلف سرویس دانشجویی", "کتابخانه مرکزی", "باشگاه دانشجویان"]
+        }
+    ]
+}

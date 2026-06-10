@@ -1,0 +1,102 @@
+      <div className="bg-card border border-border rounded-lg">
+        <div className="p-4 border-b border-border">
+          <div className="flex items-center justify-between flex-wrap gap-3">
+            <h2 className="font-medium">لیست دوچرخه‌ها</h2>
+            <div className="flex gap-2 items-center flex-wrap">
+              {/* Search Input */}
+              <div className="relative">
+                <Search className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                <input
+                  type="text"
+                  placeholder="جستجو با شناسه..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="pr-9 px-3 py-2 bg-white/5 border border-border rounded-lg text-sm outline-none focus:border-primary transition-all w-40"
+                />
+              </div>
+              
+              {/* Status Filter */}
+              <select
+                value={statusFilter}
+                onChange={(e) => setStatusFilter(e.target.value)}
+                className="px-3 py-2 bg-white/5 border border-border rounded-lg text-sm outline-none focus:border-primary transition-all cursor-pointer"
+              >
+                <option value="all">همه وضعیت‌ها</option>
+                <option value="available">موجود</option>
+                <option value="in-use">در استفاده</option>
+                <option value="charging">نیاز به شارژ</option>
+                <option value="maintenance">در تعمیر</option>
+              </select>
+
+              {/* Station Filter */}
+              <select
+                value={selectedStation}
+                onChange={(e) => setSelectedStation(e.target.value)}
+                className="px-3 py-2 bg-white/5 border border-border rounded-lg text-sm outline-none focus:border-primary transition-all cursor-pointer"
+              >
+                <option value="all">همه ایستگاه‌ها</option>
+                {uniqueStations.map((station) => (
+                  <option key={station} value={station}>{station}</option>
+                ))}
+              </select>
+            </div>
+          </div>
+        </div>
+        <div className="overflow-x-auto">
+          <table className="w-full">
+            <thead className="border-b border-border bg-white/5">
+              <tr>
+                <th className="text-right px-4 py-3 text-xs font-medium text-muted-foreground">شناسه دستگاه</th>
+                <th className="text-right px-4 py-3 text-xs font-medium text-muted-foreground">وضعیت</th>
+                <th className="text-right px-4 py-3 text-xs font-medium text-muted-foreground">سطح باتری</th>
+                <th className="text-right px-4 py-3 text-xs font-medium text-muted-foreground">ایستگاه</th>
+                <th className="text-right px-4 py-3 text-xs font-medium text-muted-foreground">آخرین سفر</th>
+                <th className="text-right px-4 py-3 text-xs font-medium text-muted-foreground">کل سفرها</th>
+                <th className="text-right px-4 py-3 text-xs font-medium text-muted-foreground">عملیات</th>
+              </tr>
+            </thead>
+            <tbody>
+              {filteredBikes.map((bike) => (
+                <tr key={bike.id} className="border-b border-border hover:bg-white/5 transition-colors">
+                  <td className="px-4 py-3 text-sm font-semibold text-primary">{bike.id}</td>
+                  <td className="px-4 py-3">{getStatusBadge(bike.status)}</td>
+                  <td className="px-4 py-3">
+                    <div className="flex items-center gap-2">
+                      <div className="flex-1 bg-white/10 rounded-full h-1.5 w-20">
+                        <div
+                          className="h-full rounded-full transition-all"
+                          style={{
+                            width: `${bike.battery}%`,
+                            backgroundColor: getBatteryColor(bike.battery),
+                          }}
+                        />
+                      </div>
+                      <span className="text-xs text-muted-foreground min-w-[2rem]">{bike.battery}٪</span>
+                    </div>
+                   </td>
+                  <td className="px-4 py-3 text-sm">{bike.station}</td>
+                  <td className="px-4 py-3 text-xs text-muted-foreground">{bike.lastTrip}</td>
+                  <td className="px-4 py-3 text-sm">{bike.totalTrips.toLocaleString()}</td>
+                  <td className="px-4 py-3">
+                    <button className="px-3 py-1 bg-secondary text-secondary-foreground rounded text-xs hover:bg-secondary/80 transition-colors cursor-pointer">
+                      جزئیات
+                    </button>
+                   </td>
+                </tr>
+              ))}
+            </tbody>
+           </table>
+          
+          {/* No results message */}
+          {filteredBikes.length === 0 && (
+            <div className="text-center py-8 text-muted-foreground">
+              هیچ دوچرخه‌ای با این مشخصات یافت نشد
+            </div>
+          )}
+        </div>
+        
+        {/* Table footer with stats */}
+        <div className="p-3 border-t border-border text-center text-xs text-muted-foreground">
+          نمایش {filteredBikes.length} از {bikesData.length} دوچرخه
+        </div>
+      </div>
